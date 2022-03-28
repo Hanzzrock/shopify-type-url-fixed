@@ -1,0 +1,7 @@
+{% capture typehandle %}{{ product.type | handleize }}{% endcapture %}
+{% if collections[typehandle] %}
+<a class="product-type-txt" href="/collections/{{ typehandle }}" title="{{ product.type | escape }}">{{ product.type }}</a>
+{% else %}
+<p  class="product-type-txt">{{ product.type | link_to_type }}</p>
+{% endif %}
+
